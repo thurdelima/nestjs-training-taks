@@ -8,16 +8,31 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 @Module({
   imports: [
     CoursesModule,
-    TypeOrmModule.forRoot({
+    TypeOrmModule.forRoot(
+    // {
+    //   type: 'postgres',
+    //   host: 'localhost',
+    //   port: 5432,
+    //   username: 'thur',
+    //   password: '123123',
+    //   database: 'db_devtraining',
+    //   autoLoadEntities: true,
+    //   //synchronize: true,
+    // }
+    
+    //config de banco de dados para docker-compose
+    {
       type: 'postgres',
-      host: 'localhost',
+      host: 'db',
       port: 5432,
-      username: 'thur',
-      password: '123123',
-      database: 'db_devtraining',
+      username: 'postgres',
+      password: 'docker',
+      database: 'cursonestjs',
       autoLoadEntities: true,
-      synchronize: true,
-    }),
+      synchronize: false,
+    }
+    
+    ),
   ],
   controllers: [AppController],
   providers: [AppService],

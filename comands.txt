@@ -1,0 +1,3 @@
+comando de rodar migration typeorm: npm run typeorm migration:run
+
+comando para rodar para habilitar a parte de execução de shell chmod +x .docker/entrypoint.sh
