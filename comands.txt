@@ -3,7 +3,7 @@ comando de rodar migration typeorm: npm run typeorm migration:run
 comando para rodar para habilitar a parte de execução de shell chmod +x .docker/entrypoint.sh
 
 
-comando para criar uma migration npx typeorm migration:create  /src/migrations/CourseRefatoring
+comando para criar uma migration npx typeorm migration:create  src/migrations/CourseRefatoring
 comando para rodar algum npx ou algo do tipo dentro do container em execução - sudo docker-compose exec app bash
 
 comandos para subir e descer o docker-compose:
